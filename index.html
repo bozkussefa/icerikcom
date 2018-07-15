@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>icerik.com</title>
+
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="lib/Semantic-UI-CSS-master/semantic.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="lib/Semantic-UI-CSS-master/semantic.css">
+    <link rel="stylesheet" type="text/css" href="lib/site.css">
+    <script src="lib/site.js"></script>
+
+
+</head>
+<body onload="onLoadHandler()">
+
+<div class="ui grid">
+    <div class="computer only row">
+        <div class="column">
+            <div class="ui stackable menu" id="navbar-computer--menu">
+                <div class="left menu">
+                    <a target="_blank" href="https://www.icerik.com/" class="item">
+                        <img src="image/logo.jpg">
+                    </a>
+                    <a class="item">
+                        <i class="book icon"></i>Projelerim
+                    </a>
+                    <a class="item">
+                        <i class="question icon"></i>
+                        Yardım
+                    </a>
+                </div>
+                <a target="_blank" href="https://www.icerik.com/siparis-formu/" class="item create-order--button">
+                    <i class="pencil alternate icon"></i>
+                    İçerik Siparişi Oluştur
+                </a>
+                <div class="right menu">
+                    <a class="item">Yüklü bakiyeniz : <i class="lira sign icon"></i>6433.88
+                    </a>
+                    <a class="item"><i class="bell icon"></i>
+                    </a>
+                    <a class="item"><i class="user icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tablet mobile only row">
+        <div class="column">
+            <div class="ui menu">
+                <a id="mobile_item" class="item"> <img src="image/logo.jpg">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui pushable segment">
+    <div class="ui sidebar vertical menu">
+        <a class="item" href="https://www.icerik.com/">
+            <i class="home icon"></i>Ana Sayfa
+        </a>
+        <a class="item">
+            <i class="book icon"></i>Projelerim
+        </a>
+        <a class="item">
+            <i class="question icon"></i>
+            Yardım
+        </a>
+        <a target="_blank" href="https://www.icerik.com/siparis-formu/" class="item create-order--button">
+            <i class="pencil alternate icon"></i>
+            İçerik Siparişi Oluştur
+        </a>
+        <a class="item">Yüklü bakiyeniz : <i class="lira sign icon"></i>6433.88
+        </a>
+        <a class="item">Bildirimler<i class="bell icon"></i>
+        </a>
+        <a class="item">Hesabım<i class="user icon"></i>
+        </a>
+    </div>
+    <div class="pusher">
+        <div id="body-content" class="ui segment">
+            <div class="ui container" id="main-container">
+
+                <div class="ui stackable grid" id="body-container">
+
+                    <div class="sixteen wide column" id="first-first--child">
+            <span>
+                 <i class="big info blue circle icon"></i>
+            </span>
+
+                        <div id="check-time--header"></div>
+                    </div>
+
+                    <div class="thirteen wide column" id="second-first--child">
+                        <div class="ui small breadcrumb">
+                            <a class="section">Projelerim</a>
+                            <i class="right chevron icon divider"></i>
+                            <a class="section" id="first-path"></a>
+                            <i class="right chevron icon divider"></i>
+                            <div class="active section" id="second-path"></div>
+                        </div>
+                    </div>
+                    <div class="three wide column" id="second-second--child">
+                        <div class="ui massive star rating" id="rating-content"></div>
+                    </div>
+
+                    <div class="sixteen wide column" id="third-first--child">
+
+                        <div class="ui clearing segment">
+                            <div class="ui left floated header non-margin" id="content-title"></div>
+                            <div class="ui right floated header non-margin" id="content-dead--time"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="sixteen wide column" id="fourth-first--child">
+                        <table class="ui  single line  table">
+                            <thead>
+                            <tr>
+                                <th>İçerik Türü</th>
+                                <th>İlgi Alanı</th>
+                                <th>Yazar Seviyesi</th>
+                                <th>İçerik Dili</th>
+                                <th>Görsel Kullanımı</th>
+                                <th>Kelime Aralığı</th>
+                                <th>Fiyat</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr id="table-body--th">
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="twelve wide column" id="fifth-first-child">
+                        <div class="ui raised segment">
+                            <div class="ui vertical segment">
+                                <p id="content-description"></p>
+                            </div>
+                            <div class="ui vertical segment">
+                                <p id="content"></p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="four wide column" id="fifth-second-child">
+                        <div class="ui raised segment" id="keywords-content">
+                            <span>Kelime Sayısı : 0</span><br>
+                            <span>Anahtar Kelime kullanımı</span>
+
+                        </div>
+                        <div id="keywords-content--buttons">
+                            <button class="ui green button" onclick="approve()">
+                                Onayla
+                            </button>
+                            <button class="ui yellow button" onclick="openRevizeModal()">
+                                Revize Ver
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="info_alert" id="alert-positive--message"></div>
+                    <div class="info_alert" id="alert-negative--message"></div>
+
+                    <div class="ui inverted test modal">
+                        <div class="header">
+                            Revize Ver
+                        </div>
+                        <div class="image content">
+                            <div class="description">
+                                <div class="field">
+                        <textarea style="margin-top: 0px; margin-bottom: 0px; height: 112px; width: 100%"
+                                  id="revize-content"></textarea>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <div class="ui black deny button">
+                                İptal
+                            </div>
+                            <div class="ui positive right labeled icon button" onclick="revizePostRequest()">
+                                Revize Gönder
+                                <i class="checkmark icon"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

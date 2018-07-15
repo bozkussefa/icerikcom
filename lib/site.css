@@ -1,0 +1,90 @@
+
+#body-content {
+    min-height: 100px;
+    background: #F2F2F2;
+}
+
+#navbar-computer--menu {
+    box-shadow: 0 6px 4px -5px #ccc;
+}
+
+#navbar-computer--menu.ui.menu .item:before {
+    width: 0;
+}
+
+#navbar-computer--menu .create-order--button {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    background-color: #0ea432;
+    border-radius: 30px;
+    padding: 0.92857143em 1.14285714em;
+    max-width: 200px;
+
+}
+
+#main-container {
+    width: 1400px;
+}
+
+#first-first--child {
+    text-align: center;
+}
+
+#first-first--child #check-time--header {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#third-first--child .non-margin {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#fourth-first--child {
+    padding-top: 0;
+}
+
+#keywords-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#keywords-content .ui.label {
+    margin: 5px 5px 5px 0;
+}
+
+#keywords-content--buttons {
+    padding: 1rem;
+}
+
+.content {
+    font-size: 16px;
+    font-weight: bolder;
+    line-height: 3em;
+}
+
+.description {
+    font-size: 16px;
+    font-weight: bolder;
+    line-height: 1.5em;
+}
+
+.info_alert {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.ui.grid {
+    padding: 0 !important;
+}
+
+.pushable {
+    height: unset;
+}
+
+.pushable.segment {
+    margin: 0 !important;
+}
